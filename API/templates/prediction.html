@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Infinite: Useful CSS Animations</title>
+
+    <style>
+        html, body {
+            font-family: "Avenir", sans-serif;
+            background-color: #222;
+            color: #eee;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: 300;
+        }
+
+        h1 {
+            text-align: center;
+            padding-bottom: 40px;
+            line-height: 1;
+            font-size: 80px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ccc;
+        }
+
+        h1 .sub.header {
+            margin-top: 0;
+            padding-top: 0;
+            color: #aaa;
+            line-height: 1.6;
+            font-size: 18px;
+
+        }
+
+        .container {
+            margin: 20px auto;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.6);
+        }
+
+        .example-item {
+            text-align: center;
+        }
+
+        .btns {
+            text-align: center;
+        }
+
+        .btn, .btn-basic {
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .btn {
+            background: #8c66cf;
+        }
+
+        .btn-basic {
+            background: transparent;
+            border: 1px solid #8c66cf;
+        }
+
+
+        .footer {
+            background: #444;
+            padding: 20px 0 30px;
+            text-align: center;
+        }
+        .footer-avatar {
+            border-radius: 32px;
+            position: relative;
+            top: 8px;
+        }
+
+
+        .pulsate-css {
+            border: 3px solid #999;
+            border-radius: 30px;
+            height: 18px;
+            width: 18px;
+            position: relative;
+            display: inline-block;
+            animation: pulsate 1s ease-out;
+            animation-iteration-count: infinite; 
+            opacity: 0.0;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .opacityPulse-css {
+            animation: opacityPulse 2s ease-out;
+            animation-iteration-count: infinite; 
+            opacity: 1;
+            text-align: center;
+        }
+
+        .alertPulse-css {
+            animation: alertPulse 1s ease-out;
+            animation-iteration-count: infinite;
+            opacity: 1;
+            padding: 5px;
+            text-align: center;
+            border-radius: 50px;
+            background: #9A2727;
+        }
+
+        .rotating-css {
+            animation: rotating 2s linear;
+            animation-iteration-count: infinite;
+        }
+
+        pre, code {
+            font-family: 'Source Code Pro', monospace;
+        }
+
+        h2 {
+            padding-left: 20px;
+            border-left: 1px solid #a98ddb;
+            margin-top: 100px;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.6);
+        }
+
+        pre {
+            border-left: 1px solid #a98ddb;
+            background: #333;
+            font-size: 14px;
+            padding-left: 20px;
+        }
+
+        code {
+            color: #a98ddb;
+        }
+
+        pre code {
+            color: #ddd;
+        }
+
+
+        @media (min-width: 480px) {
+            .container {
+                margin: 50px auto;
+                width: 100%;
+                max-width: 800px;
+            }
+        }
+        .button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f34e0c;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn-group .button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn-group .button:hover span {
+  padding-right: 25px;
+}
+
+.btn-group .button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+input.input-box, textarea { background: #a98ddb; }
+
+    </style>
+
+    <link rel="stylesheet" href="infinite.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            <div class="sub header">PLANTS DISEASE .</div>
+            <br/>
+            
+            <i class='fas fa-seedling' style='font-size:36px' color="#FFFFFF"></i>
+			<div class="btn-group">
+                <a href="#prediction"  class="button"> PREDICTION RESULT </a>
+                
+                
+            </div>
+
+            
+        </h1>
+    
+        
+        <div class="examples">
+            <h2><code>PREDICTIN</code></h2>
+            <p>PREDICTION IS : <code>({{data}})</code></p>
+			<p>CONFIDANCE IS : <code>({{conf}})</code></p>
+            <div class="example-item pulsate-css"></div>
+
+            <h2><code>PLANT DISEASE</code></h2>
+            <pre><code>
+Farmers who grow vegetables such as (potatoes, tomatoes and peppers) 
+face many losses every year due to diseases that affect these plants, 
+but early detection of these diseases saves a lot of waste and reduces economic losses for the farmer
+            </code></pre>
+
+
+            <h2><code>POTATOES DISEASE</code></h2>
+            <br/>
+            <div class="example-item opacityPulse-css">
+                
+            </div>
+
+            <pre><code>
+One of the most important common diseases that affect potatoes 
+(Potato early blight) is caused by fungi, 
+as well as (Potato Lata blight) disease, which is caused by minute insects.
+            </code></pre>
+
+
+
+            <h2><code>TOMATOES DISEASE</code></h2>
+            <br/>
+
+            <pre><code>
+                The most common diseases affecting tomatoes is 
+                ['Tomato Bacterial spot',
+                'Tomato Early blight',
+                'Tomato Late blight',
+                'Tomato Leaf Mold',
+                'Tomato Septoria leaf spot',
+                'Tomato Spider mites Two spotted spider mite',
+                'Tomato  Target Spot',
+                'Tomato  Tomato YellowLeaf  Curl Virus',
+                'Tomato  Tomato mosaic virus',
+                'Tomato healthy']     
+            </code></pre>
+			<h2><code>PEPPER DISEASE</code></h2>
+            
+           
+
+            <pre><code>
+ Pepper__bell___Bacterial_spot. 
+ Pepper bell Bacterial spot is a disease of seedlings ,
+ and occurs on the seeding table when the young plants are just beginning to grow
+            </code></pre>
+
+
+
+		<section id="prediction">
+            <h2><code>PREDICTION</code></h2>
+            <p><code>PREDICTIN IS : {{data}}</code></p>
+            <p><code>confidance IS : {{conf}}</code></p>
+        </section>   
+
+            <pre><code>
+THANKS
+            </code></pre>
+        </div>
+    </div>    
+    <div class="footer">
+        <img src="https://pbs.twimg.com/profile_images/529721134107734016/19rKbZoX_400x400.png" class="footer-avatar" width="32" height="32">
+        <a href="https://twitter.com/ahmedgaber0512?s=07">Made by </a> A.G A B E R.
+    </div>
+</body>
+</html>
