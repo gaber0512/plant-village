@@ -1,4 +1,3 @@
-# plant-D
 # plants disease
 Farmers who grow vegetables such as (potatoes, tomatoes and peppers) face many losses every year due to diseases that affect these plants, but early detection of these diseases saves a lot of waste and reduces economic losses for the farmer
 
